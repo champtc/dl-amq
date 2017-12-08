@@ -4,7 +4,7 @@
 wget http://champtc.com/amq/apache-activemq-5.15.2-bin.tar.gz
 tar xzvf apache-activemq-5.15.2-bin.tar.gz
 mv apache-activemq-5.15.2 /opt
-adduser activemq -r -U -m
+adduser activemq -r -U
 ln -s /opt/apache-activemq-5.15.2/ /opt/activemq
 chown -R activemq:activemq /opt/activemq
 chown -R activemq:activemq /opt/apache-activemq-5.15.2
