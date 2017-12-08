@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 #ActiveMQ Installation:
-wget http://mirror.cogentco.com/pub/apache//activemq/5.15.2/apache-activemq-5.15.2-bin.tar.gz
+wget http://champtc.com/amq/activemq/5.15.2/apache-activemq-5.15.2-bin.tar.gz
 tar xzvf apache-activemq-5.15.2-bin.tar.gz
 mv apache-activemq-5.15.2 /opt
 adduser activemq -r -U
@@ -21,4 +21,4 @@ firewall-cmd --zone=public --add-port=8161/tcp --permanent
 firewall-cmd --zone=public --add-port=8162/tcp --permanent
 firewall-cmd --reload
 #Start the service:
-systemctl start activemq
+service activemq start
