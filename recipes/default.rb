@@ -20,3 +20,9 @@ execute 'execute install_amq.bash' do
  action :run
  command '/tmp/install_amq.bash'
 end
+
+#restart activemq
+execute 'restart activemq' do
+ action :run
+ command 'systemctl restart activemq.service'
+end
