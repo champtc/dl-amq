@@ -21,6 +21,12 @@ execute 'execute install_amq.bash' do
  command '/tmp/install_amq.bash'
 end
 
+#amq config
+execute 'change activemq.xml' do
+ action :run
+ command 'curl -L https://raw.githubusercontent.com/champtc/Infrastructure/master/Docker/ctci/activemq/conf/activemq.xml > /opt/activemq/conf/activemq.xml'
+end
+
 #restart activemq
 execute 'restart activemq' do
  action :run
